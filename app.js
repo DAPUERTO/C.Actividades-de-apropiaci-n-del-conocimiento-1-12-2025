@@ -1,3 +1,6 @@
+import { procesarPedido } from './ejercicio1-Gestion-Pedidos.js';
+
+import PromptSync from 'prompt-sync';
 // const prompt = require('prompt-sync')();
 
 
@@ -50,21 +53,46 @@
 
 
 
-const usuario = () => {
+// const usuario = () => {
 
-    return {
-        nombre: "Diego",
-        apellido: "Puerto",
-        usuario: "Diego123",
-        contrasena: "12345",           
-        activo: true,
-        notas: [10, 9, 8, 7, 6 ]        
-    }
+//     return {
+//         nombre: "Diego",
+//         apellido: "Puerto",
+//         usuario: "Diego123",
+//         contrasena: "12345",           
+//         activo: true,
+//         notas: [10, 9, 8, 7, 6 ]        
+//     }
 
-}
+// }
 
-let = persona = usuario();
-let { nombre, apellido, activo, notas } = persona;
-console.log (activo);
+// let = persona = usuario();
+// let { nombre, apellido, activo, notas } = persona;
+// console.log (activo);
+
+
+
+
+
+const prompt = PromptSync();
+
+
+const pedido = {
+    cliente: "Juan Perez",  
+    producto: "Camisa",
+    cantidad: 2
+};
+ 
+const extra1 = prompt("Ingrese un extra para el pedido: ");
+const extra2 = prompt("Ingrese otro extra para el pedido: ");
+const extra3 = prompt("Ingrese un último extra para el pedido: ");
+
+
+// -----DESTRUCTURACION-----
+
+
+const obj = procesarPedidos(pedido, extra1, extra2, extra3);
+
+console.log(obj);
 
 

@@ -1,3 +1,5 @@
+export const procesarPedido = (pedido, ...extras) => ({...pedido, extras });
+
 // 1. Gestión de pedidos
 
 //  con rest y destructuración
@@ -9,10 +11,15 @@
 
 
 
-const prompt = require('prompt-sync')();
+// export const procesarPedido = (pedido, ...extras) => {
+//     return{
+//         ...pedido,
+//         extras
+//     }
+// };
 
-function procesarPedido(pedido, ...extras) {
-    const { cliente, producto, cantidad } = pedido; 
-    return {
-        cliente,
-        producto,}
+
+
+
+
+
